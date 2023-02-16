@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="612.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.ModifyPartController">
+    <children>
+        <Label layoutX="35.0" layoutY="37.0" text="Add Part">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <RadioButton fx:id="inHouseRadio" layoutX="150.0" layoutY="37.0" mnemonicParsing="false" onAction="#inHouseSelect" selected="true" text="In-House" toggleGroup="$inOutGroup">
+            <toggleGroup>
+                <ToggleGroup fx:id="inOutGroup" />
+            </toggleGroup></RadioButton>
+        <RadioButton fx:id="outsourcedRadio" layoutX="275.0" layoutY="37.0" mnemonicParsing="false" onAction="#outsourceSelect" text="Outsourced" toggleGroup="$inOutGroup" />
+        <Label fx:id="partNameErrorLabel" layoutX="46.0" layoutY="390.0" text="" />
+        <Label layoutX="40.0" layoutY="147.0" text="ID" />
+        <Label layoutX="40.0" layoutY="184.0" text="Name" />
+        <Label layoutX="40.0" layoutY="223.0" text="Inv" />
+        <Label layoutX="40.0" layoutY="260.0" text="Price/Cost" />
+        <Label layoutX="40.0" layoutY="298.0" text="Max" />
+        <Label layoutX="324.0" layoutY="298.0" text="Min" />
+        <Label fx:id="radioChangeLabel" layoutX="40.0" layoutY="339.0" text="Machine ID" />
+        <TextField fx:id="modifyPartIDTB" disable="true" editable="false" layoutX="132.0" layoutY="143.0" />
+        <TextField fx:id="modifyPartNameTB" layoutX="132.0" layoutY="180.0" />
+        <TextField fx:id="modifyPartInvTB" layoutX="132.0" layoutY="219.0" />
+        <TextField fx:id="modifyPartPriceTB" layoutX="132.0" layoutY="256.0" />
+        <TextField fx:id="modifyPartMaxTB" layoutX="132.0" layoutY="294.0" />
+        <TextField fx:id="modifyPartMinTB" layoutX="358.0" layoutY="294.0" />
+        <TextField fx:id="modifyPartMCIDTB" layoutX="132.0" layoutY="335.0" />
+        <Button fx:id="modifyPartSaveButton" layoutX="365.0" layoutY="386.0" mnemonicParsing="false" onAction="#clickPartSave" text="Save" />
+        <Button fx:id="modifyPartCancelButton" layoutX="433.0" layoutY="386.0" mnemonicParsing="false" onAction="#clickPartCancel" text="Cancel" />
+        <Label fx:id="partInvErrorLabel" layoutX="46.0" layoutY="411.0" text="" />
+        <Label fx:id="partPriceErrorLabel" layoutX="46.0" layoutY="432.0" text="" />
+        <Label fx:id="partMaxErrorLabel" layoutX="46.0" layoutY="453.0" text="" />
+        <Label fx:id="partMinErrorLabel" layoutX="46.0" layoutY="474.0" text="" />
+        <Label fx:id="partMCIDErrorLabel" layoutX="46.0" layoutY="495.0" text="" />
+    </children>
+</AnchorPane>
